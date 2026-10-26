@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#f3f5e3"/><stop offset="1" stop-color="#d5e0b3"/></linearGradient><pattern id="lines" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M0 35.5H36" stroke="#9caf75" opacity=".12"/></pattern></defs>
+  <rect width="1200" height="675" fill="url(#paper)"/><rect width="1200" height="675" fill="url(#lines)"/>
+  <rect x="28" y="28" width="1144" height="619" rx="18" fill="none" stroke="#8ea466"/>
+  <path d="M760 644C688 488 722 285 927 122M798 480C1003 473 1070 367 1066 272 930 262 821 334 798 480M766 382C641 373 591 271 609 197 737 227 790 283 766 382" fill="#90a765" opacity=".28"/>
+  <circle cx="912" cy="238" r="153" fill="#e8eed3" stroke="#9eb378" stroke-width="2"/>
+  <text x="912" y="278" text-anchor="middle" font-family="Georgia,serif" font-size="122" fill="#526c36">DX</text>
+  <text x="87" y="116" font-family="Arial,sans-serif" font-size="19" letter-spacing="5" fill="#607847">NO ATELIÊ / DADOS &amp; BI</text>
+  <text x="83" y="305" font-family="Georgia,serif" font-size="68" fill="#374426">Medica</text>
+  <text x="83" y="386" font-family="Georgia,serif" font-size="86" fill="#455826">Doctor X</text>
+  <path d="M87 437H539" stroke="#93aa6b"/>
+  <text x="87" y="486" font-family="Arial,sans-serif" font-size="25" fill="#607847">POWER BI</text>
+  <rect x="84" y="539" width="300" height="49" rx="24" fill="#455826"/>
+  <circle cx="110" cy="563" r="5" fill="#c5d59e"/><text x="130" y="571" font-family="Arial,sans-serif" font-size="19" fill="#f3f5e3">EM DESENVOLVIMENTO</text>
+</svg>

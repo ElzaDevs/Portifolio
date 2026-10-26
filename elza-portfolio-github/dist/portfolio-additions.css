@@ -1,0 +1,12 @@
+/* New entries use the established cover/collection interactions and the same palette. */
+.project-meta{flex-wrap:wrap;gap:7px 10px}.project-status{max-width:100%}
+.project-link-note{font-size:10px!important;line-height:1.8!important;color:#627747;margin:4px 0 14px}
+.night .project-link-note{color:#bfcea8}
+.project-card[data-tags=data] .project-title-button{font-size:.94em}
+.projects-section .filters{max-width:100%;overflow-x:auto;white-space:nowrap;min-width:0;padding-bottom:5px}
+.delivery-shelf>div{grid-template-columns:repeat(3,minmax(0,1fr))}
+.project-card .cover-front .project-art-atlas{background:#191924}
+.project-card .cover-front .project-art-doctorx{background:#060d12}
+.project-card .cover-front .project-art-atlas>.project-cover{width:151px;max-width:80%;height:auto;object-fit:contain;object-position:center}
+.bag-collectibles img.bag-atlas-logo{object-fit:contain;background:#191924}
+@media(max-width:600px){.bag-collectibles{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.bag-collectibles img{height:86px}.bag-collectibles strong{font-size:16px}.bag-collectibles small,.bag-collectibles button>span{font-size:10px}.bag-collectibles>button{min-height:173px}.project-meta{font-size:9px}.project-status{font-size:9px}}

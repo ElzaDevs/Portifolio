@@ -1,0 +1,78 @@
+/* Kiki's little corner: actual art, tactile controls and real portfolio destinations. */
+.shop-card.kiki-card{max-width:450px;transform:rotate(.5deg);border:2px solid #71804e;border-radius:22px 22px 12px 12px;box-shadow:2px 3px 0 #b5c38c,6px 8px 0 #e4daba,10px 16px 0 #45582624,0 25px 55px -30px #37442699}
+.kiki-card:before{width:96px;left:calc(50% - 48px);top:-17px;background:#b6c77bad;z-index:4}
+.kiki-card .shop-heading{border-radius:20px 20px 0 0;padding:17px 17px 14px;font-size:10px;letter-spacing:1.5px}
+.world-tabs{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:7px;padding:12px;background:#f3f5e3;border-bottom:1px solid #b6c493}
+.world-tabs>button{font-size:10px;border:1px solid #b3c18c;border-radius:8px;min-height:41px;padding:8px 6px;background:#e7edce;color:#4a6035;box-shadow:0 3px 0 #bac895;transition:background .2s,transform .2s,box-shadow .2s}
+.world-tabs>button:hover{background:#d8e3b5;transform:translateY(-1px);box-shadow:0 4px 0 #a9ba80}
+.world-tabs>button[aria-pressed=true]{background:#455826;border-color:#455826;color:#f3f5e3;box-shadow:0 3px 0 #2f3f1c}
+.kiki-card .shop-window.kiki-stage{aspect-ratio:1.06;background:#4b3f4e;border:0;border-bottom:4px solid #9c7d56;position:relative;isolation:isolate}
+.kiki-card .kiki-stage>.scene-poster{position:absolute;inset:0;object-fit:contain;object-position:center;image-rendering:pixelated;opacity:0;visibility:hidden;transition:opacity .25s;z-index:0}
+.kiki-card .kiki-stage>.city-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:0;visibility:hidden;max-width:none;z-index:0;transition:opacity .25s}
+.kiki-stage:after{content:'';position:absolute;inset:0;pointer-events:none;z-index:1;box-shadow:inset 0 0 0 8px #384c301a,inset 0 -35px 45px -35px #2c301e99}
+.kiki-card .kiki-stage[data-world=bakery]>.scene-poster,.kiki-card .kiki-stage[data-world=garden][data-state=poster]>.scene-poster{opacity:1;visibility:visible}
+.kiki-card .kiki-stage[data-world=sky]>.city-art{opacity:1;visibility:visible}
+.kiki-card .kiki-stage>canvas{opacity:0;pointer-events:none;visibility:hidden}
+.kiki-card .kiki-stage[data-world=garden][data-state=ready]>canvas{opacity:1;pointer-events:auto;visibility:visible}
+.kiki-card .kiki-stage[data-world=garden]{background:radial-gradient(ellipse at 45% 25%,#f3f5e3,#dde3ba 75%,#b6c77b)}
+.kiki-card .scene-point,.kiki-card .diorama-scene[data-state=ready] .scene-point{display:flex;gap:6px;min-width:0;min-height:37px;padding:5px 9px 5px 5px;inset:auto;border-radius:30px;border:1px solid #9aaa73;background:#f6f4dfee;color:#374426;box-shadow:0 3px 0 #929e6b,0 6px 14px #27391e20;z-index:3;backdrop-filter:blur(4px)}
+.kiki-card .scene-point>span{width:23px;height:23px;border-radius:50%;background:#dce6be;color:#455826;display:grid;place-items:center;font-size:8px;flex-shrink:0}
+.kiki-card .scene-point>b{position:static;inset:auto;transform:none;opacity:1;background:none;border:0;padding:0;font-size:10px;font-weight:700;letter-spacing:0;white-space:nowrap;pointer-events:none}
+.kiki-card .scene-point:hover,.kiki-card .scene-point:focus-visible{background:#fdf9e8}
+.kiki-card .kiki-stage[data-world=bakery] .scene-point-about{left:5%;top:19%;transform:none}
+.kiki-card .kiki-stage[data-world=bakery] .scene-point-skills{right:4%;top:8%;transform:none}
+.kiki-card .kiki-stage[data-world=bakery] .scene-point-projects{right:5%;top:77%;transform:none}
+.kiki-card .kiki-stage[data-world=sky] .scene-point-about{left:6%;top:14%;transform:none}
+.kiki-card .kiki-stage[data-world=sky] .scene-point-skills{right:5%;top:61%;transform:none}
+.kiki-card .kiki-stage[data-world=sky] .scene-point-projects{left:7%;top:82%;transform:none}
+.kiki-card .kiki-stage[data-world=garden][data-state=ready] .scene-point{left:var(--pin-x);top:var(--pin-y);transform:translate(-50%,-50%)}
+.kiki-card .kiki-stage[data-world=garden][data-state=poster] .scene-point-about{left:5%;top:19%;transform:none}
+.kiki-card .kiki-stage[data-world=garden][data-state=poster] .scene-point-skills{right:4%;top:8%;transform:none}
+.kiki-card .kiki-stage[data-world=garden][data-state=poster] .scene-point-projects{right:5%;top:77%;transform:none}
+.kiki-rider{position:absolute;left:44%;top:33%;width:150px;z-index:2;pointer-events:none;transform:rotate(-4deg);filter:drop-shadow(3px 8px 4px #14251944)}
+.kiki-rider>img{width:100%;height:auto;image-rendering:pixelated}
+.kiki-rider.is-flying{animation:kiki-roundtrip 5.5s cubic-bezier(.45,.05,.25,1) both}
+.kiki-card .scene-toolbar{gap:9px;padding:13px 12px;background:#edf0d8;min-height:72px;flex-wrap:wrap}
+.kiki-card .scene-caption{flex:1;min-width:140px}
+.kiki-card .scene-caption strong{font-size:8px;line-height:1.6;letter-spacing:.8px}
+.kiki-card .scene-caption p{font-size:10px;max-width:255px;line-height:1.7}
+.kiki-card:not([data-world=garden]) .scene-controls{display:none}
+.kiki-fly{min-height:41px;display:inline-flex;align-items:center;justify-content:center;gap:5px;padding:9px 12px;background:#d7e3b5;border:1px solid #a7ba7a;border-radius:8px;color:#455826;font-size:10px;box-shadow:0 3px 0 #a1b674}
+.kiki-fly:hover{background:#cbdca2}.kiki-fly:disabled{opacity:.65}
+.kiki-card .shop-dialogue{padding:13px 14px;background:#f3f5e3;min-height:76px}
+.kiki-card .shop-dialogue p{font-size:12px;line-height:1.75}
+.kiki-card .shop-dialogue>svg{width:29px;height:29px;color:#374426;fill:#37442612}
+.delivery-shelf{padding:13px 14px 15px;background:linear-gradient(#e8edd0,#dce5bd);border-bottom:1px solid #aebf85}
+.delivery-shelf>span{display:block;font-size:8px;letter-spacing:1.1px;color:#596e3e;font-weight:700;margin-bottom:9px}
+.delivery-shelf>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.delivery-shelf button{font-size:10px;display:flex;align-items:center;justify-content:center;gap:5px;min-height:43px;background:#f6f6e3;border:1px solid #adbc84;border-radius:5px 9px 5px 5px;color:#455826;box-shadow:1px 3px 0 #a6b67c;transition:background .2s,transform .2s}
+.delivery-shelf button>span{font-size:8px;color:#6b7f3a}
+.delivery-shelf button:hover{background:#edf2d4;transform:translateY(-2px)}
+.world-credits{display:flex;justify-content:center;gap:11px;padding:7px 12px 8px;font-size:8px;line-height:1.6;background:#edf0d7;color:#5d7244;border-radius:0 0 10px 10px}
+.world-credits>a{text-decoration:underline;text-underline-offset:3px;min-height:25px;display:inline-flex;align-items:center}
+.kiki-card .shop-actions>*{font-size:10px;min-height:45px}
+.evening .kiki-stage>.scene-poster{filter:sepia(.13) brightness(.86)}
+.evening .kiki-stage>.city-art{filter:sepia(.2) saturate(.8) brightness(.8)}
+.evening .kiki-card .scene-toolbar,.evening .kiki-card .shop-dialogue{background:#e9edcf}
+.project-card .cover-stage{height:285px;background:radial-gradient(ellipse at 50% 35%,#f7f4dc,#dde6bf);border-radius:9px 9px 0 0;isolation:auto}
+.project-card .cover-object{inset:20px 16px 22px;transform-style:flat;transform:perspective(950px) rotateX(3deg) rotateY(-4deg)}
+.project-card .cover-stage.is-flipped .cover-object{transform:perspective(950px) rotateY(0deg)}
+.project-card .cover-face{backface-visibility:visible;-webkit-backface-visibility:visible;transform:none;border-width:6px}
+.project-card .cover-front .project-art-image{background:#e3e8d1}
+.project-card .cover-front .project-cover{object-fit:contain}
+.project-card .cover-back{background:repeating-linear-gradient(transparent 0 25px,#bac69c20 25px 26px),#f4f3de}
+.cover-face .lacrei-visual>img{width:96px;height:88px;margin-bottom:8px}
+.cover-face .lacrei-visual>span{font-size:28px}
+.cover-face .lacrei-visual>p{font-size:13px}
+.cover-face .image-label{background:#263b25e8;left:9px;top:9px;font-size:8px;padding:4px 7px}
+.project-info>p{font-size:14px;line-height:1.8}
+.project-card .cover-controls{padding:12px;gap:8px}
+.project-card .cover-controls>button{font-size:10px;min-height:43px}
+@keyframes kiki-roundtrip{0%{transform:translate3d(0,0,0) rotate(-4deg)}20%{transform:translate3d(calc(var(--flight-span)*-.7),25px,0) rotate(-10deg)}48%{transform:translate3d(calc(var(--flight-span)*-.2),-62px,0) rotate(6deg)}75%{transform:translate3d(calc(var(--flight-span)*.65),-28px,0) rotate(3deg)}100%{transform:translate3d(0,0,0) rotate(-4deg)}}
+@media(max-width:1120px){.world-tabs{padding:10px;gap:6px}.world-tabs>button{font-size:9px}.kiki-card .shop-heading{font-size:9px;letter-spacing:1px}.kiki-card .scene-caption p{font-size:9px}.kiki-card .scene-caption strong{font-size:7px}.delivery-shelf{padding-inline:10px}.delivery-shelf button{font-size:9px}.kiki-card .shop-dialogue p{font-size:11px}.project-card .cover-stage{height:265px}.project-card .cover-controls{padding:10px;gap:6px}.project-card .cover-controls>button{font-size:9px}.kiki-card .scene-point>b{font-size:9px}.kiki-card .scene-point{padding-right:8px}.kiki-rider{width:130px}}
+@media(max-width:820px) and (min-width:601px){.kiki-card .scene-toolbar{flex-direction:row;align-items:center}.kiki-card .scene-caption{min-width:100%;}.kiki-card .scene-controls{width:100%}.world-tabs{gap:4px;padding:9px}.world-tabs>button{font-size:8px;padding-inline:3px}.delivery-shelf>div{gap:4px}.delivery-shelf button{font-size:8px;gap:3px}.kiki-card .scene-point>b{font-size:8px}.kiki-card .scene-point{min-height:32px;padding:4px 7px 4px 4px;gap:4px}.kiki-card .scene-point>span{width:20px;height:20px;font-size:7px}.kiki-rider{width:112px}.project-card .cover-stage{height:285px}}
+@media(max-width:600px){.shop-card.kiki-card{max-width:420px;transform:none}.kiki-card .shop-heading{padding:16px 14px;font-size:9px}.world-tabs{padding:12px;gap:7px}.world-tabs>button{font-size:10px;min-height:44px}.kiki-card .kiki-stage{aspect-ratio:1.06}.kiki-card .scene-point,.kiki-card .diorama-scene[data-state=ready] .scene-point{min-height:40px;gap:5px;padding:5px 9px 5px 5px}.kiki-card .scene-point>span{width:24px;height:24px;font-size:8px}.kiki-card .scene-point>b{font-size:10px}.kiki-card .scene-caption strong{font-size:8px}.kiki-card .scene-caption p{font-size:10px}.kiki-card .scene-toolbar{padding:13px;min-height:77px}.kiki-card .shop-dialogue p{font-size:11px}.kiki-card .shop-dialogue{padding:12px 13px}.delivery-shelf{padding:14px 12px}.delivery-shelf>span{font-size:8px}.delivery-shelf>div{gap:7px}.delivery-shelf button{font-size:10px;min-height:44px}.kiki-card .shop-actions>*{font-size:9px}.world-credits{font-size:8px}.kiki-rider{width:140px}.project-card .cover-stage{height:300px}.project-card .cover-object{inset:20px 17px 23px}.project-card .cover-controls{padding:12px;gap:9px}.project-card .cover-controls>button{font-size:10px;min-height:44px}}
+@media(max-width:360px){.world-tabs>button{font-size:9px}.kiki-card .scene-point>b{font-size:9px}.kiki-card .scene-point>span{width:21px;height:21px}.delivery-shelf button{font-size:9px}.kiki-card .shop-actions>*{font-size:8px}.project-card .cover-stage{height:280px}}
+.motion-paused .kiki-rider{animation:none!important}.motion-paused .cover-stage.is-turning .cover-object{animation:none!important}
+@media(prefers-reduced-motion:reduce){.kiki-rider{animation:none!important}.cover-stage.is-turning .cover-object{animation:none!important}.project-card .cover-object,.project-card .cover-stage.is-flipped .cover-object{transform:none}}
+html:not(.js) .world-tabs,html:not(.js) .delivery-shelf{display:none}
